@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">    <title>Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>Library</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 id='heading'>Library</h1>
-    <button id="newBookBtn">New Book</button>
-    <div id="bookContainer"></div>
+
+        <div id="wrapper">
+            <h1 id='heading'>Library</h1>
+            <button id="newBookBtn">Add New Book</button>
+        </div>
+        <div id="bookContainer">
+        </div>
+    <div id="popUpForm">
+        <form action="" onsubmit="return false">
+            <!--prevent the page from reloading-->
+            <label for="title">Title:</label>
+            <input id="title" type="text" required>
+            <label for="author">Author:</label>
+            <input id="author" type="text" required>
+            <label for="pages">Pages</label>
+            <input id="pages" type="number" value="1" min="1" required>
+            <div id="readBtns">
+                <p>Read:</p>
+                <input id="read" type="radio" name="read" value="yes" checked>
+                <label for="read">Yes</label>
+                <input id="notRead" type="radio" name="read" value="no">
+                <label for="notRead">No</label>
+            </div>
+            <div id="formBtnContainer">
+                <button id="submitBtn" class="formBtn" type="submit">Submit</button>
+                <button id="cancelBtn" class="formBtn" type="button">Cancel</button>
+            </div>
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,116 @@
+:root{
+    --deepBlue:#2155CD;
+    --blue:#0AA1DD;
+    --lightBlue:#79DAE8;
+    --lighterBlue:#E8F9FD;
+    --headerSize:20vh;
+}
+
+body{
+    margin:0;
+}
+
+#container{
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+    /* min-height:100vh; */
+    overflow:auto;
+}
+
+p,h1,button,label{
+    font-family:'Roboto', sans-serif;   
+}
+
+button,input{
+    border:none;
+    border-radius: 2rem;
+}
+
+input{
+    padding-left:5px;
+}
+
 #heading{
+    margin-left:10px;
     font-size:3rem;
-    font-family: 'Roboto', sans-serif;
+}
+
+#wrapper{
+    display:grid;
+    height: var(--headerSize);
+    grid-template-columns:min-content 200px ;
+    grid-template-rows:min-content 1fr;
+    align-items:center;
+    background-color: var(--lighterBlue);
+    z-index:1;
+    box-shadow:0 0px 5px black;
+}
+
+#newBookBtn{
+    margin-left:30px;
+    height:40px;
+    background-color: var(--deepBlue);
+    color:white;
+}
+
+#newBookBtn:hover{
+    background-color: var(--blue);
+}
+
+#popUpForm{
+    display:grid;
+    grid-template-columns: min-content min-content;
+    border:solid black 2px;
+    width:50%;
+    height:50%;
+    padding-top:10px;
+    padding-left:20px;
+    border-radius:2rem;
+    background-color:var(--deepBlue);
+    color:white;
+    visibility: hidden;
+    position:absolute;
+    left:25%;
+    top:25%;
+}
+
+#formBtnContainer{
+    display:grid;
+    grid-template-columns: min-content min-content;
+    column-gap: 10px;
+}
+
+.formBtn{
+    margin-top:10px;
+    width:100px;
+    height:30px;
+    background-color: var(--lightBlue);
+    color:white;
+    z-index:2;
+}
+
+#cancelBtn{
+    background-color: #85586F;
+}
+
+.formBtn:hover{
+    background-color: var(--lighterBlue);
+    color:black;
+}
+
+#bookContainer{
+    padding-top:20px;
+    background-color: var(--blue);
+    width:auto;
+    min-height:calc(98vh - var(--headerSize));
+    display:grid;
+    grid-template-rows:repeat(auto-fit,minmax(min-content,250px));
+    grid-template-columns:repeat(auto-fit,minmax(15%,1fr));
+    overflow:auto;
 }
 
 .card{
+    background-color:var(--deepBlue);
+    box-shadow: 0 0  5px black;
+    margin:20px;
 }
