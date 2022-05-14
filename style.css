@@ -8,17 +8,13 @@
 
 body{
     margin:0;
+    font-family:'Roboto', sans-serif;   
 }
 
 #container{
     display:grid;
     grid-template-rows: 1fr 4fr;
-    /* min-height:100vh; */
     overflow:auto;
-}
-
-p,h1,button,label{
-    font-family:'Roboto', sans-serif;   
 }
 
 button,input{
@@ -85,17 +81,21 @@ input{
     width:100px;
     height:30px;
     background-color: var(--lightBlue);
-    color:white;
+    color:black;
     z-index:2;
 }
 
 #cancelBtn{
     background-color: #85586F;
+    color:white;
 }
 
 .formBtn:hover{
     background-color: var(--lighterBlue);
-    color:black;
+}
+
+#cancelBtn:hover{
+    background-color:#b97096;
 }
 
 #bookContainer{
@@ -111,6 +111,26 @@ input{
 
 .card{
     background-color:var(--deepBlue);
-    box-shadow: 0 0  5px black;
+    box-shadow: 0 0 5px black;
     margin:20px;
+    display:grid;
+    border-radius:2rem;
+    padding:10px 0 10px 10px ;
+    overflow: auto;
+}
+
+.cardText{
+    color:var(--lighterBlue,"white");
+    font-size:1.5rem;
+}
+
+.readBtn{
+    background-color: var(--lightBlue);
+    width:100px;
+    height:30px;
+    color:black;
+}
+
+.readBtn:hover{
+    background-color: var(--lighterBlue);
 }
