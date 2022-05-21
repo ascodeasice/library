@@ -10,11 +10,14 @@ const readOptions=document.getElementsByName("read");
 const cancelBtn=document.getElementById("cancelBtn");
 const readBtns=document.getElementsByClassName("readBtn");
 
-function Book(title, author,pages,read){
-    this.title=title;
-    this.author=author;
-    this.pages=pages;
-    this.read=read;
+
+class Book{
+    constructor(title, author,pages,read){
+        this.title=title;
+        this.author=author;
+        this.pages=pages;
+        this.read=read;
+        }
 }
 
 function addBookToLibrary(title, author,pages,read){
@@ -62,15 +65,6 @@ function displayLibrary(){
         bookContainer.appendChild(card);
     }
 
-    // for(let i=0;i<readBtns.length;i++){
-    //     btn=readBtns[i];
-    //     btn.addEventListener("click",function(){
-    //         let index=btn.id.slice(-1);//last char of string
-    //         console.log(index);
-    //         myLibrary[index].read=(myLibrary[index].read=="yes"?"no":"yes");
-    //         displayLibrary();
-    //     })
-    // }
     
 }
 
